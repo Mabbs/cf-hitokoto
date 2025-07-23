@@ -1,0 +1,55 @@
+name: Update and Deploy
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Remove Prev
+        run: |
+          rm -rf categories
+          rm -rf orig_data
+          
+      - name: Clone origin
+        run: git clone https://github.com/hitokoto-osc/sentences-bundle
+          
+      - name: Update content
+        run: python gen.py
+
+      - name: Remove origin
+        run: |
+          rm -rf sentences-bundle
+        
+      - name: Commit changes
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add .
+          git commit -m "Update hitokoto" || exit 0
+          git push
+        
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./
+          
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

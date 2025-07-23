@@ -15,4 +15,4 @@ concat("/categories/", substring(http.request.uri.query,2,3), "/", substring(uui
 
 | 参数 | 值 | 可选 | 说明 |
 | - | - | - | - |
-| c | 见后表 | 是 | 句子类型 |
+| c | 见[categories.json](categories.json) | 是 | 句子类型 |
