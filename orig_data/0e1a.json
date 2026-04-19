@@ -1,1 +1,1 @@
-{"id": 5375, "uuid": "8d742dd4-e975-4be4-8323-9115c3256344", "hitokoto": "输了你，赢了这个世界也没意义。", "type": "e", "from": "原创", "from_who": "Qicloud", "creator": "Qicloud", "creator_uid": 4635, "reviewer": 4756, "commit_from": "web", "created_at": "1585493095", "length": 15}
+{"id": 3813, "uuid": "9a80cb3f-cb40-40d2-9d84-40086d7ccc75", "hitokoto": "模拟只会猜题意,贪心只能过样例。数学上来先打表,DP一般看规律。组合数学靠运气,计算几何瞎暴力。图论一顿套模板,数论只会GCD。", "type": "f", "from": "网络", "from_who": null, "creator": "abc2237512422", "creator_uid": 1873, "reviewer": 0, "commit_from": "web", "created_at": "1534578919", "length": 64}
