@@ -1,1 +1,1 @@
-{"id": 3813, "uuid": "9a80cb3f-cb40-40d2-9d84-40086d7ccc75", "hitokoto": "模拟只会猜题意,贪心只能过样例。数学上来先打表,DP一般看规律。组合数学靠运气,计算几何瞎暴力。图论一顿套模板,数论只会GCD。", "type": "f", "from": "网络", "from_who": null, "creator": "abc2237512422", "creator_uid": 1873, "reviewer": 0, "commit_from": "web", "created_at": "1534578919", "length": 64}
+{"id": 8593, "uuid": "5dfcab7e-0c40-4ccf-982c-9834572714b5", "hitokoto": "不管多少个选择，最后都是二选一！", "type": "e", "from": "尤龙", "from_who": "尤龙", "creator": "illidan47", "creator_uid": 11395, "reviewer": 1, "commit_from": "web", "created_at": "1643903393", "length": 16}
